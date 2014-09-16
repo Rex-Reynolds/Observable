@@ -96,7 +96,6 @@ public class WeatherDataTest extends WeatherData{
 	@Test
 	public void testDeleteObservers() {
 		weatherData.addObserver(observer = new TestObserver());
-		weatherData.addObserver(observer2 = new TestObserver());
 		weatherData.deleteObserver(observer);
 		assertEquals("Failed to delete observer",
 				0, weatherData.countObservers());
