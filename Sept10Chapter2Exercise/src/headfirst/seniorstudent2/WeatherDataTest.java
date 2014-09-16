@@ -56,14 +56,45 @@ public class WeatherDataTest extends WeatherData {
 	 * .
 	 */
 	@Test
-	public void testSetMeasurements() {
+	public void testSetMeasurementsTemperature() {
 
-		float humidity = 10;
+		float humidity = 0;
 		float temperature = 11;
-		float pressure = 12;
+		float pressure = 0;
 		weatherData.setMeasurements(temperature, humidity, pressure);
 		assertEquals(temperature, weatherData.getTemperature(), 0.5);
+
+
+	}
+	
+	/**
+	 * Test method for
+	 * {@link headfirst.seniorstudent2.WeatherData#setMeasurements(float, float, float)}
+	 * .
+	 */
+	@Test
+	public void testSetMeasurementsHumidity() {
+
+		float humidity = 10;
+		float temperature = 0;
+		float pressure = 0;
+		weatherData.setMeasurements(temperature, humidity, pressure);
 		assertEquals(humidity, weatherData.getHumidity(), 0.5);
+
+	}
+	
+	/**
+	 * Test method for
+	 * {@link headfirst.seniorstudent2.WeatherData#setMeasurements(float, float, float)}
+	 * .
+	 */
+	@Test
+	public void testSetMeasurementsPressure() {
+
+		float humidity = 0;
+		float temperature = 0;
+		float pressure = 12;
+		weatherData.setMeasurements(temperature, humidity, pressure);
 		assertEquals(pressure, weatherData.getPressure(), 0.5);
 
 	}
