@@ -5,7 +5,7 @@
  * Elon, North Carolina, 27244 U.S.A.
  * All Rights Reserved
  */
-package headfirst.seniorstudent2;
+package headfirst.seniorstudent1;
 
 import java.awt.BorderLayout;
 import java.awt.Container;

@@ -4,7 +4,7 @@
  * Copyright (c) 2014 HFDP and DJP
  */
 
-package headfirst.seniorstudent2;
+package headfirst.seniorstudent1;
 
 /**
  * WeatherData can publish changes in data to 0 or more Observers.

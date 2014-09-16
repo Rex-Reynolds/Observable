@@ -1,11 +1,9 @@
 /*
- * WeatherStationControlGUI.java 1.0 Sep 10, 2014
+ * WeatherStationControlGUI.java 1.0 Sep 6, 2014
  *
- * Copyright (c) 2014 Elon University
- * Elon, North Carolina, 27244 U.S.A.
- * All Rights Reserved
+ * Copyright (c) 2014 HFDP and DJP
  */
-package headfirst.seniorstudent2;
+package headfirst.juniorstudent2;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -23,9 +21,10 @@ import javax.swing.SwingConstants;
 public class WeatherStationControlGUI extends JFrame {
 
   private JTextField humidityTextField;
-  private JTextField pressureTextField;
+  private JTextField presssureTextField;
   private JTextField temperatureTextField;
   private JButton updateButton;
+
   private WeatherData weatherData;
 
   public WeatherStationControlGUI(WeatherData weatherData) {
@@ -39,6 +38,7 @@ public class WeatherStationControlGUI extends JFrame {
 
   private void createGui() {
     Container container = this.getContentPane();
+
     JPanel holdGrid = new JPanel();
     JPanel leftGrid = new JPanel();
     JPanel rightGrid = new JPanel();
@@ -52,12 +52,13 @@ public class WeatherStationControlGUI extends JFrame {
     rightGrid.setLayout(new GridLayout(3, 1));
     rightGrid.add(temperatureTextField = new JTextField("0", 10));
     rightGrid.add(humidityTextField = new JTextField("0", 10));
-    rightGrid.add(pressureTextField = new JTextField("0", 10));
+    rightGrid.add(presssureTextField = new JTextField("0", 10));
 
     buttonPanel.add(updateButton = new JButton("Update"));
     holdGrid.setLayout(new BorderLayout(5, 0));
     holdGrid.add(leftGrid, BorderLayout.WEST);
     holdGrid.add(rightGrid, BorderLayout.CENTER);
+
     container.add(holdGrid, BorderLayout.CENTER);
     container.add(buttonPanel, BorderLayout.SOUTH);
 
@@ -66,7 +67,7 @@ public class WeatherStationControlGUI extends JFrame {
       public void actionPerformed(ActionEvent e) {
         weatherData.setMeasurements(Float.parseFloat(temperatureTextField.getText()),
                                     Float.parseFloat(humidityTextField.getText()),
-                                    Float.parseFloat(pressureTextField.getText()));
+                                    Float.parseFloat(presssureTextField.getText()));
       }
     });
   }

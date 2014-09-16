@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2014 HFDP
  */
-package headfirst.seniorstudent2;
+package headfirst.seniorstudent1;
 
 public interface Subject {
 

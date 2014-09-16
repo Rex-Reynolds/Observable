@@ -4,7 +4,7 @@
  * Copyright (c) 2014 HFDP and DJP
  */
 
-package headfirst.seniorstudent2;
+package headfirst.seniorstudent1;
 
 public interface Observer {
 
